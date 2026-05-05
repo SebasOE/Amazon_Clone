@@ -1,3 +1,4 @@
+import 'package:amazon/componentes/cabezera.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -12,9 +13,8 @@ class MainApp extends StatelessWidget {
     return const MaterialApp(
       home: Scaffold(
         body: Column(
-          
           children: [
-            Text('Hello World!'), nigga
+            Cabezera(),
           ],
         ),
       ),
