@@ -16,7 +16,7 @@ class Cabezera extends StatelessWidget {
           child: Row(
             children: [
               Image.asset(
-                "lib/images/amazon.jpg",
+                "lib/images/amazon1.jpg",
                 width: 100,
                 height: 100,
               )
