@@ -1,3 +1,4 @@
+import 'package:amazon/componentes/buscar.dart';
 import 'package:flutter/material.dart';
 
 class Cabezera extends StatelessWidget {
@@ -75,10 +76,7 @@ class Cabezera extends StatelessWidget {
                         crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
                           SizedBox(width: 20),
-                          Text(
-                            "Buscar en Amazon.es",
-                            style: TextStyle(color: Colors.grey),
-                          ),
+                          Buscar(ourHintText: "Buscar en Amazon.es",),
                         ],
                       ),
                     ),
