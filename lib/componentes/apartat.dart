@@ -31,7 +31,7 @@ class Apartat extends StatelessWidget {
 
               SizedBox(height: 12),
 
-              Image.network(
+              Image.asset(
                 url,
                 width: MediaQuery.of(context).size.width * 0.2,
                 height: MediaQuery.of(context).size.width * 0.17,
