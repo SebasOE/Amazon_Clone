@@ -1,4 +1,5 @@
 import 'package:amazon/componentes/buscar.dart';
+import 'package:amazon/pages/laptop.dart';
 import 'package:flutter/material.dart';
 
 class Cabezera extends StatelessWidget {
@@ -80,17 +81,33 @@ class Cabezera extends StatelessWidget {
                         ],
                       ),
                     ),
-                    Container(
+                    
+                    GestureDetector(
+
+                      onTap: (){
+                        print("Going to another page...");
+
+                        Navigator.push(
+                          context, 
+                          MaterialPageRoute(builder: (context){
+
+                          return secondPage();
+                          }),
+                        );
+                      },
+
+                      child: Container(
                       width: 70,
                       height: 40,
                       color: Colors.amber,
                       child: Icon(Icons.manage_search_rounded),
                     ),
+                    )
                   ],
                 ),
               ),
 
-              SizedBox(width: 20,),
+              SizedBox(width: 40,),
 
               Container(
                 child: Row(
