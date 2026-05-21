@@ -80,8 +80,7 @@ class Cabezera extends StatelessWidget {
                           Buscar(ourHintText: "Buscar en Amazon.es",),
                         ],
                       ),
-                    ),
-                    
+                    ),                
                     GestureDetector(
 
                       onTap: (){
