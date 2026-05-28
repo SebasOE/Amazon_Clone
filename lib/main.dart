@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:amazon/componentes/apartat.dart';
 import 'package:amazon/componentes/cabezera.dart';
+import 'package:amazon/componentes/seccio1.dart';
+import 'package:amazon/componentes/apartatSeccio2.dart';
 
 void main() {
   runApp(const MainApp());
@@ -32,53 +33,80 @@ class MainApp extends StatelessWidget {
                   Column(
                     children: [
                       const SizedBox(height: 400),
+                      const Seccion1(),
 
-                      GridView.count(
-                        shrinkWrap: true,
-                        physics: const NeverScrollableScrollPhysics(),
-                        crossAxisCount: 4,
-                        children: const [
-                          Apartat(
-                            url:
-                                'lib/images/1.jpg',
-                            title: 'Ofertas en Hogar y jardín por menos de 50€',
+                      Container(
+                        width: MediaQuery.of(context).size.width * 0.98,
+                        height: 300,
+                        decoration: BoxDecoration(color: Colors.white),
+
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Padding(
+                              padding: const EdgeInsets.all(10),
+                              child: Text(
+                                "Los más vendidos en Amazon",
+                                style: TextStyle(
+                                  fontSize: 18,
+                                  fontWeight: FontWeight.bold,
+                                ),
+                              ),
+                            ),
+
+                            GridView.count(
+                              shrinkWrap: true,
+                              physics: const NeverScrollableScrollPhysics(),
+                              crossAxisCount: 5,
+                              childAspectRatio: 1.5,
+                              children: const [
+                                Apartat2(url: 'lib/images/2.1.jpg'),
+                                Apartat2(url: 'lib/images/2.2.jpg'),
+                                Apartat2(url: 'lib/images/2.3.jpg'),
+                                Apartat2(url: 'lib/images/2.4.jpg'),
+                                Apartat2(url: 'lib/images/2.5.jpg'),
+                              ],
+                            ),
+                          ],
+                        ),
+                      ),
+
+                      Padding(
+                        padding: const EdgeInsets.all(10),
+                        child: Container(
+                          width: MediaQuery.of(context).size.width * 0.98,
+                          height: 300,
+                          decoration: BoxDecoration(color: Colors.white),
+                        
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Padding(
+                                padding: const EdgeInsets.all(10),
+                                child: Text(
+                                  "Los más vendidos en Amazon",
+                                  style: TextStyle(
+                                    fontSize: 18,
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                              ),
+                              GridView.count(
+                                shrinkWrap: true,
+                                physics: const NeverScrollableScrollPhysics(),
+                                crossAxisCount: 5,
+                                childAspectRatio: 1.5,
+                                children: const [
+                                  Apartat2(url: 'lib/images/3.1.jpg'),
+                                  Apartat2(url: 'lib/images/3.2.jpg'),
+                                  Apartat2(url: 'lib/images/3.3.jpg'),
+                                  Apartat2(url: 'lib/images/3.4.jpg'),
+                                  Apartat2(url: 'lib/images/2.1.jpg'),
+                                ],
+                              ),
+                            ],
                           ),
-                          Apartat(
-                            url:
-                                'lib/images/2.jpg',
-                            title: 'Informática y accesorios',
-                          ),
-                          Apartat(
-                            url:
-                                'lib/images/3.jpg',
-                            title: 'Ponte en forma desde casa',
-                          ),
-                          Apartat(
-                            url:
-                                'lib/images/4.jpg',
-                            title: 'Imprescindibles para el día de partido',
-                          ),
-                          Apartat(
-                            url:
-                                'lib/images/5.jpg',
-                            title: 'Descubre los productos más vendidos',
-                          ),
-                          Apartat(
-                            url:
-                                'lib/images/6.jpg',
-                            title: 'Ahorra en dispositivos Amazon',
-                          ),
-                          Apartat(
-                            url:
-                                'lib/images/7.jpg',
-                            title: 'Ahorra en productos con +4 estrellas',
-                          ),
-                          Apartat(
-                            url:
-                                'lib/images/8.jpg',
-                            title: 'Hogar y Cocina',
-                          ),
-                        ],
+                        ),
                       ),
                     ],
                   ),
